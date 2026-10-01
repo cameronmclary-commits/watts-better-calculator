@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Auto-restored theme variables */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    --shadow-x: 0px;
+    --shadow-y: 1px;
+    --shadow-blur: 4px;
+    --shadow-spread: 0px;
+    --shadow-opacity: 0.2;
+    --shadow-color: #000000;
+    --shadow-2xs: var(--shadow-x) var(--shadow-y) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+    --shadow-xs: var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--shadow-spread) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+    --shadow-md: calc(var(--shadow-x) * 2) calc(var(--shadow-y) * 2) calc(var(--shadow-blur) * 3) calc(var(--shadow-spread) - 1px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+    --shadow-xl: calc(var(--shadow-x) * 6) calc(var(--shadow-y) * 6) calc(var(--shadow-blur) * 7) calc(var(--shadow-spread) - 5px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 100%), transparent);
+    --shadow-2xl: calc(var(--shadow-x) * 8) calc(var(--shadow-y) * 8) calc(max(0px, var(--shadow-blur) * 9 - 8px)) calc(var(--shadow-spread) - 12px) color-mix(in srgb, var(--shadow-color) calc(var(--shadow-opacity) * 250%), transparent);
+
+    /* Sunset gradient theme — magenta/orange/gold */
+    --background: 30 50% 97%;
+    --foreground: 280 30% 15%;
+
+    --card: 30 40% 95%;
+    --card-foreground: 280 30% 15%;
+
+    --popover: 30 40% 95%;
+    --popover-foreground: 280 30% 15%;
+
+    --primary: 330 75% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 170 55% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 30 30% 90%;
+    --muted-foreground: 280 15% 45%;
+
+    --accent: 42 90% 55%;
+    --accent-foreground: 280 30% 15%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 25% 85%;
+    --input: 30 25% 85%;
+    --ring: 330 75% 55%;
+
+    --radius: 0.875rem;
+
+    --chart-1: 42 90% 55%;
+    --chart-2: 170 55% 45%;
+    --chart-3: 220 70% 55%;
+    --chart-4: 280 60% 60%;
+    --chart-5: 0 72% 60%;
+
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    --shadow-sm: 0 1px 3px 0 rgba(180, 100, 60, 0.06);
+    --shadow: 0 4px 12px -2px rgba(180, 100, 60, 0.1);
+    --shadow-lg: 0 12px 32px -4px rgba(180, 100, 60, 0.15);
+  }
+
+  .dark {
+    --background: 280 30% 8%;
+    --foreground: 30 30% 95%;
+    --card: 280 25% 12%;
+    --card-foreground: 30 30% 95%;
+    --popover: 280 25% 12%;
+    --popover-foreground: 30 30% 95%;
+    --primary: 330 75% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 170 55% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 280 20% 18%;
+    --muted-foreground: 30 20% 60%;
+    --accent: 42 90% 55%;
+    --accent-foreground: 280 30% 15%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 280 20% 20%;
+    --input: 280 20% 20%;
+    --ring: 330 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Sunset gradient backgrounds */
+.gradient-hero {
+  background: linear-gradient(135deg, hsl(330, 75%, 55%) 0%, hsl(280, 60%, 50%) 40%, hsl(30, 85%, 60%) 100%);
+}
+
+.gradient-warm {
+  background: linear-gradient(135deg, hsl(330, 75%, 55%) 0%, hsl(280, 60%, 55%) 100%);
+}

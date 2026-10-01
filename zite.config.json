@@ -1,0 +1,15 @@
+{
+  "id": "cdvnt9capn",
+  "accessMode": "external",
+  "envVars": {
+    "ZITE_BATTERY_DB_API_KEY": {
+      "description": "API key for your Battery Database's product-listing connection"
+    },
+    "ZITE_BATTERY_DB_URL": {
+      "description": "Full address of your Battery Database's product-listing connection (e.g. https://2am5kavyuw.zite.so/api/listProducts)"
+    },
+    "ZITE_CRM_API_KEY": {
+      "description": "API key for your external CRM's lead intake (kwpcsjjq6u.zite.so)"
+    }
+  }
+}
